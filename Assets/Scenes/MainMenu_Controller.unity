@@ -1601,7 +1601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6, y: -97.4}
+  m_AnchoredPosition: {x: 0.6, y: -105.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409291201
@@ -1622,7 +1622,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press "B" on your Right controller to make this screen disappear / appear
+  m_text: "Press \"B\" on your Right controller to make this screen disappear / appear.\n\nPress
+    \"Y\" on your Left controller to return to \nmain menu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1660,7 +1661,7 @@ MonoBehaviour:
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1691,12 +1692,12 @@ MonoBehaviour:
   m_margin: {x: 50.419716, y: -36.495895, z: 52.38547, w: 63.233795}
   m_textInfo:
     textComponent: {fileID: 1409291201}
-    characterCount: 73
+    characterCount: 134
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 12
+    spaceCount: 25
+    wordCount: 23
     linkCount: 0
-    lineCount: 2
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1750,7 +1751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4948056085071156, guid: 39475d556840902458f2711a3956c86b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4948056085071156, guid: 39475d556840902458f2711a3956c86b, type: 3}
       propertyPath: m_LocalPosition.z
