@@ -5,7 +5,7 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
+![Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
@@ -62,3 +62,4 @@ crashlytics-build.properties
 # ignore videos
 *.mp4
 Assets/Interactive360/Render Models/OculusTouch/Models/controller_NM.psd
+*.resource
