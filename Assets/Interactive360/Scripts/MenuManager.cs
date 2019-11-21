@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 namespace Interactive360
 {
@@ -14,6 +14,7 @@ namespace Interactive360
         public GameObject m_pauseButton; //A reference to the button that toggle the video content to pause
 
         [SerializeField] string m_oculusMenuToggle = "Button2"; //The name of the oculus button input that will toggle the scene on and off
+	[SerializeField] string m_oculusReset = "Button4"; //The name of the oculus button input that will toggle the scene on and off
 
         private AudioSource m_menuToggleAudio; //Audio clip to play when the menu is closed
 
@@ -40,6 +41,7 @@ namespace Interactive360
             m_menu.SetActive(!m_menu.activeInHierarchy);
         }
 
+
         //If we detect input, call the toggleMenu method 
         private void checkForInput()
         {
@@ -52,6 +54,15 @@ namespace Interactive360
                 if (m_menuToggleAudio)
                     m_menuToggleAudio.Play();
             }
+
+            //check for input from specified Oculus Touch button
+            if (Input.GetButtonDown(m_oculusReset))
+            {
+		SceneManager.LoadScene("MainMenu_Copy");
+		GameManager.instance.activeScene = "MainMenu_Copy";
+		m_menu.SetActive(true);
+            }
+
 
         }
 
