@@ -2,10 +2,12 @@
 <p align="center">
 	<img src="https://img.shields.io/badge/platform-Windows-blue?style=for-the-badge"
 			 alt="platform">
-	<img src="https://img.shields.io/badge/engine-Unity 2019.2.6f1-blueviolet?style=for-the-badge"
-			 alt="engine">
  	<img src="https://img.shields.io/badge/language-Csharp-yellow?style=for-the-badge"
 			 alt="language">
+	<img src="https://img.shields.io/badge/engine-Unity 2019.2.6f1-blueviolet?style=for-the-badge"
+		 alt="engine">
+	<img src="https://img.shields.io/badge/VR-Oculus Rift-important?style=for-the-badge"
+			 alt="vr">
 </p>
 
 <p align="center"><img src="Pictures/MainMenu.gif" width=500></p>
@@ -83,7 +85,7 @@ If the user has downloaded the .mp4 files into "Assets\Interactive360\Videos\", 
 
 ## INTERESTING TECHNICAL CHALLENGES
 
-### YouTube Format for 360 Videos, Unity Video Filetype, and Open Source Solution
+### Challenge: YouTube Format for 360 Videos, Unity Video Filetype, and Open Source Solution
 
 #### Unique 360 Format
 Since all our videos were sourced from YouTube, it was important that the format of video provided match with <a href="https://docs.unity3d.com/Manual/VideoPanoramic.html">what Unity was capable of rendering</a>. Unity can render "Equirectangular" (no depth, 2D), "Cube Map" (for static usage), or "Over / Under" on its skyboxes. However, from early 2018, YouTube videos if downloaded using the common video downloaders on the internet, will have YouTube's own 3D format. People speculated that this is YouTube's decision to make videos optimized for areas that viewers are likely to watch. But this does not help development for Unity and we struggled on this problem for quite a bit.
@@ -118,7 +120,12 @@ With ffmpeg, merge audio and video streams:
 .\ffmpeg -i UnknownBeirut.mp4 -i UnknownBeirutAudio.mp3 -map 0:v -map 1:a -c:v copy -c:a copy UnknownBeirutVidAud.mp4 -y
 ```
 
-### Controllers and Legacy System
+### Challenge: Controllers and Legacy System
+An emblematic problem for Unity has always been backward compatibility. <a href="https://www.pcgamer.com/what-indie-developers-think-of-unity-in-2018/">Developers have long learnt</a> that even minor updates for the Unity engine can lead to substantial changes in how things are done "under the hood", leading to working projects suddenly become bug-filled messes. Our project template, though very simple, was released alongside Unity 2017.3, which is very old by Unity development cycle standard and as such we encountered a bug right away: the VR controller doesn't move.
+
+This is a substantial bug, though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide. The other scene that we could have used is where the controllers are not used and all interactions are done through the user "looking" at buttons long enough. The perplexing thing is that the controller buttons are still interactive, it's the controllers (or the movements of the controllers) that is missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
+
+Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script is . 
 
 ## MOTIVATIONS
 
