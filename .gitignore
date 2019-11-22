@@ -63,3 +63,4 @@ crashlytics-build.properties
 *.mp4
 Assets/Interactive360/Render Models/OculusTouch/Models/controller_NM.psd
 *.resource
+desktop.ini
