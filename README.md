@@ -58,6 +58,8 @@ Once there is all the .resource files in "Build\ProtestExperience_Data\", the us
 
 If the user has downloaded the .mp4 files into "Assets\Interactive360\Videos\", the user can choose to run in Unity editor.
 
+Oculus Rift is required for playing.
+
 ## INSTRUCTIONS
 <p align="center"><b>Use Right controller main trigger while raycast on menu button to change videos</b></p>
 <p align="center"><img src="Pictures/PressRight.gif" width=300></p>
@@ -83,7 +85,7 @@ If the user has downloaded the .mp4 files into "Assets\Interactive360\Videos\", 
 ### Citizen Seoul (2:55)
 <a href="https://www.youtube.com/watch?v=vMIi5bU-Wuo">9th Candle Protest for reformation of prosecution</a> is uploaded by user "donggi cho". Released 16 Oct 2019, the video depicts a protest in Seoul, Korea. It is unknown if this is a pro-resignation demonstration or counter demonstration for the current Korean president Moon Jae-in amidst a corruption scandal of his justice minister Cho Kuk, though likely to be an pro-resignation protest. The scene is remarkable for showing how organized a protest can be. (maybe someone who know Korean can help?).
 
-## INTERESTING TECHNICAL CHALLENGES
+## INTERESTING DEVELOPMENT CHALLENGES
 
 ### Challenge: YouTube Format for 360 Videos, Unity Video Filetype, and Open Source Solution
 
@@ -126,16 +128,27 @@ With ffmpeg, merge audio and video streams:
 An emblematic problem for Unity has always been backward compatibility. <a href="https://www.pcgamer.com/what-indie-developers-think-of-unity-in-2018/">Developers have long learnt</a> that even minor updates for the Unity engine can lead to substantial changes in how things are done "under the hood", leading to working projects suddenly become bug-filled messes. Our project template, though very simple, was released alongside Unity 2017.3, which is very old by Unity development cycle standard and as such we encountered a bug right away: the VR controller doesn't move.
 
 #### Non-moving Controllers
-This is a substantial bug, though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide. The other scene that we could have used is where the controllers are not used and all interactions are done through the user "looking" at buttons long enough. The perplexing thing is that the controller buttons are still interactive, it's the controllers (or the movements of the controllers) that is missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
+This is a substantial bug. Though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide, and a step back from the experience we wanted to provide. The other template that we could have used do not use the controllers and all interactions are done through the user "looking"/"gazing" at buttons long enough. The perplexing thing with our situation is that the controller buttons are still interactive. It's the controllers (or the movements of the controllers) that are missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
 
 #### A Clue in the Tutorial
-Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script was "Tracked Pose Driver". 
+Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular C# script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script was "Tracked Pose Driver". 
 
 #### Legacy systems
-With that we should easily be able to find the script and apply it as needed
+But our problem doesn't end there. "Tracked Posed Driver" is supposed to be the general script with which an Unity project can take in a varity of inputs from different hardware (one of Unity's strengths). It used to just be provided with the installation of Unity. However, it doesn't exist anymore with our current version 2019.2.6f1 . Thankfully, we were able to find an Unity <a href="https://forum.unity.com/threads/trackedposedriver-in-2019-1.634963/">forum thread</a> that pointed us in the direction of installing the package <b>"XR Legacy Input Helpers"</b>. That succesfully fixed our bug, we have moving controllers, and were able to work toward other functionalities (like menu toggle and scene reset).
 
 ## MOTIVATIONS
 
+
 ## AUTHOR
+Created by Viet Than as the individual project for class "CS3892: Virtual-Reality Projects for Interdisciplinary Apps" at Vanderbilt University, Fall 2019.
+
+Contact at viet.than@vanderbilt.edu or thanhoangviet@gmail.com .
 
 ## ACKNOWLEDGEMENTS
+Short tutorial: <a href="https://www.youtube.com/watch?v=B1s9SnS99sQ">YouTube video</a>.
+
+Long tutorial series: <a href="https://www.youtube.com/playlist?list=PLX2vGYjWbI0TifrTlupfrJeLa7c8LunUf">YouTube playlist</a>.
+
+Template sample project: <a href="https://assetstore.unity.com/packages/essentials/tutorial-projects/interactive-360-sample-project-108974">Unity store package</a>.
+
+Lecturers: Prof. Robert Bodenheimer, EECS Department. Prof. Ole Molvig, History Department. Vanderbilt University
