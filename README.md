@@ -12,6 +12,37 @@
 
 <p align="center"><img src="Pictures/MainMenu.gif" width=500></p>
 
+## TABLE OF CONTENTS
+   * [Experience "Happenings Around the World"](#experience-happenings-around-the-world)
+      * [1. INSTALLATION / DOWNLOAD](#installation--download)
+         * [Whole Project from Google Drive](#whole-project-from-google-drive)
+         * [Built Executable from Google Drive](#built-executable-from-google-drive)
+         * [Clone this repository and get the missing files](#clone-this-repository-and-get-the-missing-files)
+            * [Built only](#built-only)
+            * [Unity project](#unity-project)
+      * [2. RUN &amp; PLAY](#run--play)
+      * [3. INSTRUCTIONS](#instructions)
+      * [4. CONTENT](#content)
+         * [NYT Fallujah (11:09)](#nyt-fallujah-1109)
+         * [ABC Hong Kong (6:27)](#abc-hong-kong-627)
+         * [Citizen Beirut (1:05)](#citizen-beirut-105)
+         * [Citizen Seoul (2:55)](#citizen-seoul-255)
+      * [5. INTERESTING DEVELOPMENT CHALLENGES](#interesting-development-challenges)
+         * [Challenge: YouTube Format for 360 Videos, Unity Video Filetype, and Open Source Solution](#challenge-youtube-format-for-360-videos-unity-video-filetype-and-open-source-solution)
+            * [Unique 360 Format](#unique-360-format)
+            * [Deep in Discussion Thread](#deep-in-discussion-thread)
+            * [Filetypes and Another Open-Source Solution](#filetypes-and-another-open-source-solution)
+            * [Useful youtube-dl &amp; ffmpeg Commands:](#useful-youtube-dl--ffmpeg-commands)
+         * [Challenge: Controllers and Legacy System](#challenge-controllers-and-legacy-system)
+            * [Backward (In)compatibility](#backward-incompatibility)
+            * [Non-moving Controllers](#non-moving-controllers)
+            * [A Clue in the Tutorial](#a-clue-in-the-tutorial)
+            * [Legacy systems](#legacy-systems)
+      * [6. MOTIVATIONS](#motivations)
+      * [7. AUTHOR](#author)
+      * [8. ACKNOWLEDGEMENTS](#acknowledgements)
+
+
 ## INSTALLATION / DOWNLOAD
 
 Users have three options, either (1) [download the entire folder from Google Drive](whole-project-from-google-drive) which contains the whole project and the built executable, or (2) [download the "Build" folder from Google Drive](built-executable-from-google-drive) which contains only the built executable, or (3) [clone this repository and then download the missing files](clone-this-repository-and-get-the-missing-files) from Google Drive.
