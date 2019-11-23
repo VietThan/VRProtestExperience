@@ -1,4 +1,4 @@
-# Experience Happenings Around the World
+# Experience "Happenings Around the World"
 <p align="center">
 	<img src="https://img.shields.io/badge/platform-Windows-blue?style=for-the-badge"
 			 alt="platform">
@@ -128,7 +128,7 @@ With ffmpeg, merge audio and video streams:
 An emblematic problem for Unity has always been backward compatibility. <a href="https://www.pcgamer.com/what-indie-developers-think-of-unity-in-2018/">Developers have long learnt</a> that even minor updates for the Unity engine can lead to substantial changes in how things are done "under the hood", leading to working projects suddenly become bug-filled messes. Our project template, though very simple, was released alongside Unity 2017.3, which is very old by Unity development cycle standard and as such we encountered a bug right away: the VR controller doesn't move.
 
 #### Non-moving Controllers
-This is a substantial bug. Though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide, and a step back from the experience we wanted to provide. The other template that we could have used do not use the controllers and all interactions are done through the user "looking"/"gazing" at buttons long enough. The perplexing thing with our situation is that the controller buttons are still interactive. It's the controllers (or the movements of the controllers) that are missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
+This is a substantial bug. Though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide, and a step back from the experience we wanted to achieve. The other template that we could have used do not use the controllers and all interactions are done through the user "looking"/"gazing" at buttons long enough. The perplexing thing with our situation is that the controller buttons are still interactive. It's the controllers (or the movements of the controllers) that are missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
 
 #### A Clue in the Tutorial
 Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular C# script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script was "Tracked Pose Driver". 
@@ -137,7 +137,7 @@ Looking through the game objects, and with the help of a Unity console error mes
 But our problem doesn't end there. "Tracked Posed Driver" is supposed to be the general script with which an Unity project can take in a varity of inputs from different hardware (one of Unity's strengths). It used to just be provided with the installation of Unity. However, it doesn't exist anymore with our current version 2019.2.6f1 . Thankfully, we were able to find an Unity <a href="https://forum.unity.com/threads/trackedposedriver-in-2019-1.634963/">forum thread</a> that pointed us in the direction of installing the package <b>"XR Legacy Input Helpers"</b>. That succesfully fixed our bug, we have moving controllers, and were able to work toward other functionalities (like menu toggle and scene reset).
 
 ## MOTIVATIONS
-
+Please see <a href="MOTIVATIONS.md">MOTIVATIONS.md</a>.
 
 ## AUTHOR
 Created by Viet Than as the individual project for class "CS3892: Virtual-Reality Projects for Interdisciplinary Apps" at Vanderbilt University, Fall 2019.
