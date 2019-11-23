@@ -121,11 +121,18 @@ With ffmpeg, merge audio and video streams:
 ```
 
 ### Challenge: Controllers and Legacy System
+
+#### Backward (In)compatibility
 An emblematic problem for Unity has always been backward compatibility. <a href="https://www.pcgamer.com/what-indie-developers-think-of-unity-in-2018/">Developers have long learnt</a> that even minor updates for the Unity engine can lead to substantial changes in how things are done "under the hood", leading to working projects suddenly become bug-filled messes. Our project template, though very simple, was released alongside Unity 2017.3, which is very old by Unity development cycle standard and as such we encountered a bug right away: the VR controller doesn't move.
 
+#### Non-moving Controllers
 This is a substantial bug, though we can use the other templates available, it would be a step back from the interactivity that an Oculus Rift would potentially provide. The other scene that we could have used is where the controllers are not used and all interactions are done through the user "looking" at buttons long enough. The perplexing thing is that the controller buttons are still interactive, it's the controllers (or the movements of the controllers) that is missing. In fact, because the controllers spawn conveniently in a location where the raycast is on a scene button, we're actually able to launch the game without moving controllers, but able to switch into a video, and nothing else.
 
-Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script is . 
+#### A Clue in the Tutorial
+Looking through the game objects, and with the help of a Unity console error message, we were able to pin down that there is a particular script missing from the "RH" and "LH" game object. However, what is the script? Unity only knows that something is missing. The answer didn't come easily, in fact, we had to look through the video tutorial and happen to catch a frame where the object with the missing script was clicked and on the inspector the name of the script was "Tracked Pose Driver". 
+
+#### Legacy systems
+With that we should easily be able to find the script and apply it as needed
 
 ## MOTIVATIONS
 
