@@ -38,9 +38,10 @@
             * [Non-moving Controllers](#non-moving-controllers)
             * [A Clue in the Tutorial](#a-clue-in-the-tutorial)
             * [Legacy systems](#legacy-systems)
-      * [6. MOTIVATIONS](#motivations)
-      * [7. AUTHOR](#author)
-      * [8. ACKNOWLEDGEMENTS](#acknowledgements)
+      * [6. OUTPUT CAPTURED](#output-captured)
+      * [7. MOTIVATIONS](#motivations)
+      * [8. AUTHOR](#author)
+      * [9. ACKNOWLEDGEMENTS](#acknowledgements)
 
 
 ## INSTALLATION / DOWNLOAD
@@ -166,6 +167,15 @@ Looking through the game objects, and with the help of a Unity console error mes
 
 #### Legacy systems
 But our problem doesn't end there. "Tracked Posed Driver" is supposed to be the general script with which an Unity project can take in a varity of inputs from different hardware (one of Unity's strengths). It used to just be provided with the installation of Unity. However, it doesn't exist anymore with our current version 2019.2.6f1 . Thankfully, we were able to find an Unity <a href="https://forum.unity.com/threads/trackedposedriver-in-2019-1.634963/">forum thread</a> that pointed us in the direction of installing the package <b>"XR Legacy Input Helpers"</b>. That succesfully fixed our bug, we have moving controllers, and were able to work toward other functionalities (like menu toggle and scene reset).
+
+## OUTPUT CAPTURED
+To see the screen capture playing the executable, please see <a href="InBuiltVideo.mp4">InBuiltVideo.mp4</a>
+
+To see the screen capture playing in the editor, please see <a href="InEditorVideo.mp4">InEditorVideo.mp4</a>
+
+To hear the game played with sound  (captured through a smartphone), please see <a href="Non-CapturedVideo.mp4">Non-CapturedVideo.mp4</a>
+
+
 
 ## MOTIVATIONS
 Please see <a href="MOTIVATIONS.md">MOTIVATIONS.md</a>.
