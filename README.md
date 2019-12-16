@@ -48,7 +48,7 @@
 
 Users have three options, either (1) [download the entire folder from Google Drive](whole-project-from-google-drive) which contains the whole project and the built executable, or (2) [download the "Build" folder from Google Drive](built-executable-from-google-drive) which contains only the built executable, or (3) [clone this repository and then download the missing files](clone-this-repository-and-get-the-missing-files) from Google Drive.
 
-Project's Google Drive link: https://drive.google.com/drive/folders/1IcyC5SGtITwNdlNzdM0d2vNWOhm3cU-d?usp=sharing
+Project's Google Drive link (vietvrindividual): https://drive.google.com/drive/folders/1iJ7ePtNStnXBxxdw0V_2RZCUZ-ZNe9WT?usp=sharing
 
 ### Whole Project from Google Drive
 This option has the most extraneous bloat.
